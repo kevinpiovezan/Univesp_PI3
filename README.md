@@ -33,24 +33,23 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 # Layout da aplicação
 
 ## Vídeo de breve demonstração da aplicação
-![Image](https://github.com/user-attachments/assets/26124b4b-5749-4644-9d51-904e22186ef0)
+![Image](https://github.com/user-attachments/assets/421a7ca5-df1a-4904-b4f5-e97ecc996aa1)
 
 ## Conhecendo as telas
 ## Tela Home
-![tela_inicial_v1](https://github.com/kellydatabase/Teste/assets/122828003/ad4149cf-58a4-456b-b1c3-5b9523fb62d0)
+![Image](https://github.com/user-attachments/assets/25dc74c6-e711-46e3-a205-308896112b03)
 
 ## Menu
-![menu](https://github.com/kellydatabase/Teste/assets/122828003/864f7e7b-751e-4571-aee8-5d094854a9a5)
+![Image](https://github.com/user-attachments/assets/4dd3a5f3-bc5c-496f-8de9-8f8b61341b52)
 
 ## Carga de alunos
-![tela_carga_v1](https://github.com/kellydatabase/Teste/assets/122828003/bb3f52f5-478e-43f3-9d31-2d55399f37fa)
-
-## Cadastro de alunos
-![tela_cadastro_v1](https://github.com/kellydatabase/Teste/assets/122828003/f3d9e5aa-e9d8-45a4-bf6a-94df41275b1f)
+![Image](https://github.com/user-attachments/assets/64457227-949e-4247-9ce0-64941a0098b9)
 
 ## Tela de busca
-![tela_busca_v1](https://github.com/kellydatabase/Teste/assets/122828003/19b388aa-673c-4d97-bfa6-f332b701b195)
+![Image](https://github.com/user-attachments/assets/7f147397-a132-4525-beac-456dec0d1c9f)
 
+## Tela de mapas
+![Image](https://github.com/user-attachments/assets/911320e5-71d4-461f-acb7-d266cbc99ed4)
 
 
 # Tecnologias utilizadas
@@ -66,7 +65,7 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 - Bootstrap 4
 
 ## Acessibilidade
-- Vlibras
+- VLibras
 
 # Como executar o projeto
 
@@ -104,7 +103,7 @@ http://localhost:8080
 
 ## Agradecimentos
 - Deborah Regina Freitas Dantas (Coordenadora do Polo UNICEU Caminho do Mar)
-- Orientadora: Ana Paula Enedina dos Santos NucciAna Paula Enedina dos Santos Nucci
+- Orientadora: Ana Paula Enedina dos Santos Nucci
 
 ## Licença
 - Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI3/blob/main/LICENSE) 
