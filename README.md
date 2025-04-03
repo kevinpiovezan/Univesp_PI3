@@ -13,8 +13,9 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 
 # Projeto Integrador III -  Eixo Computação
 ## Objetivo
-- Desenvolver um software com framework web que utilize noções de banco de dados, praticando controle de versão 
-
+- Desenvolver um software com framework web ou aplicativo que utilize banco de dados, inclua script web (Javascript), nuvem, acessibilidade, controle de versão, integração contínua e testes.
+- Incluir um dos seguintes requisitos: uso e fornecimento de API, análises de dados e IoT.
+  
 ## Ementa
 - Resolução de problemas
 - Levantamento de requisitos
@@ -23,6 +24,8 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 - CSS
 - Banco de Dados
 - Controle de Versão
+- Acessibilidade VLibras
+- API
 
 
 # Layout da aplicação
@@ -87,7 +90,7 @@ http://localhost:8080
 # Autores
 
 - Caio Cesar Silva Lopes
-- José Ivan
+- José Ivan Marciano Júnior
 - Carlos Paião
 - George Toshio Shimabukuro
 - Kelly Rodrigues de Jesus
@@ -97,7 +100,7 @@ http://localhost:8080
 
 ## Agradecimentos
 - Deborah Regina Freitas Dantas (Coordenadora do Polo UNICEU Caminho do Mar)
-- Orientador (Orientador do Projeto Integrador III - Univesp)
+- Orientadora: Ana Paula Enedina dos Santos NucciAna Paula Enedina dos Santos Nucci
 
 ## Licença
 - Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI1/blob/main/LICENSE) 
