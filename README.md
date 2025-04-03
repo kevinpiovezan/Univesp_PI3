@@ -1,4 +1,4 @@
-# INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
+# Implementação de Acessibilidade e API: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI3/blob/main/LICENSE) 
 
@@ -110,7 +110,7 @@ http://localhost:8080
 ## Licença
 - Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI3/blob/main/LICENSE) 
 ```bash
-https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE
+https://github.com/kellydatabase/Univesp_PI3/blob/main/LICENSE
 
 ```
 
