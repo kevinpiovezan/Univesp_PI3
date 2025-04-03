@@ -32,9 +32,8 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 
 # Layout da aplicação
 
-## Vídeo de apresentação
-
-https://github.com/kellydatabase/Teste/assets/122828003/863a259f-0af6-4fdf-ae60-efbf6c0b1d66
+## Vídeo de breve demonstração da aplicação
+![Image](https://github.com/user-attachments/assets/26124b4b-5749-4644-9d51-904e22186ef0)
 
 ## Conhecendo as telas
 ## Tela Home
