@@ -1,6 +1,6 @@
-# INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
+# Implementação de Acessibilidade e API: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI3/blob/main/LICENSE) 
 
 # Sobre a aplicação
 Esse repositório é dedicado ao INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador III do 6° semestre do curso.
@@ -9,12 +9,15 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 
 Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 
-![Univesp_logo_png_rgb](https://github.com/kellydatabase/Teste/assets/122828003/5416a6ca-754c-4f38-9216-d2a20a1563e3)
+
+![Image](https://github.com/user-attachments/assets/3b8643d1-9901-4448-b761-21b9d03996f8)
+
 
 # Projeto Integrador III -  Eixo Computação
 ## Objetivo
-- Desenvolver um software com framework web que utilize noções de banco de dados, praticando controle de versão 
-
+- Desenvolver um software com framework web ou aplicativo que utilize banco de dados, inclua script web (Javascript), nuvem, acessibilidade, controle de versão, integração contínua e testes.
+- Incluir um dos seguintes requisitos: uso e fornecimento de API, análises de dados e IoT.
+  
 ## Ementa
 - Resolução de problemas
 - Levantamento de requisitos
@@ -23,30 +26,30 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 - CSS
 - Banco de Dados
 - Controle de Versão
+- Acessibilidade VLibras
+- API
 
 
 # Layout da aplicação
 
-## Vídeo de apresentação
-
-https://github.com/kellydatabase/Teste/assets/122828003/863a259f-0af6-4fdf-ae60-efbf6c0b1d66
+## Vídeo de breve demonstração da aplicação
+![Image](https://github.com/user-attachments/assets/421a7ca5-df1a-4904-b4f5-e97ecc996aa1)
 
 ## Conhecendo as telas
 ## Tela Home
-![tela_inicial_v1](https://github.com/kellydatabase/Teste/assets/122828003/ad4149cf-58a4-456b-b1c3-5b9523fb62d0)
+![Image](https://github.com/user-attachments/assets/25dc74c6-e711-46e3-a205-308896112b03)
 
 ## Menu
-![menu](https://github.com/kellydatabase/Teste/assets/122828003/864f7e7b-751e-4571-aee8-5d094854a9a5)
+![Image](https://github.com/user-attachments/assets/4dd3a5f3-bc5c-496f-8de9-8f8b61341b52)
 
 ## Carga de alunos
-![tela_carga_v1](https://github.com/kellydatabase/Teste/assets/122828003/bb3f52f5-478e-43f3-9d31-2d55399f37fa)
-
-## Cadastro de alunos
-![tela_cadastro_v1](https://github.com/kellydatabase/Teste/assets/122828003/f3d9e5aa-e9d8-45a4-bf6a-94df41275b1f)
+![Image](https://github.com/user-attachments/assets/64457227-949e-4247-9ce0-64941a0098b9)
 
 ## Tela de busca
-![tela_busca_v1](https://github.com/kellydatabase/Teste/assets/122828003/19b388aa-673c-4d97-bfa6-f332b701b195)
+![Image](https://github.com/user-attachments/assets/df3d1e63-d65b-4527-bb64-e4fb7f999718)
 
+## Tela de mapas
+![Image](https://github.com/user-attachments/assets/911320e5-71d4-461f-acb7-d266cbc99ed4)
 
 
 # Tecnologias utilizadas
@@ -60,6 +63,9 @@ https://github.com/kellydatabase/Teste/assets/122828003/863a259f-0af6-4fdf-ae60-
 - HTML 5
 - CSS 3
 - Bootstrap 4
+
+## Acessibilidade
+- VLibras
 
 # Como executar o projeto
 
@@ -87,7 +93,7 @@ http://localhost:8080
 # Autores
 
 - Caio Cesar Silva Lopes
-- José Ivan
+- José Ivan Marciano Júnior
 - Carlos Paião
 - George Toshio Shimabukuro
 - Kelly Rodrigues de Jesus
@@ -97,12 +103,12 @@ http://localhost:8080
 
 ## Agradecimentos
 - Deborah Regina Freitas Dantas (Coordenadora do Polo UNICEU Caminho do Mar)
-- Orientador (Orientador do Projeto Integrador III - Univesp)
+- Orientadora: Ana Paula Enedina dos Santos Nucci
 
 ## Licença
-- Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI1/blob/main/LICENSE) 
+- Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI3/blob/main/LICENSE) 
 ```bash
-https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE
+https://github.com/kellydatabase/Univesp_PI3/blob/main/LICENSE
 
 ```
 
