@@ -1,6 +1,6 @@
 # INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI3/blob/main/LICENSE) 
 
 # Sobre a aplicação
 Esse repositório é dedicado ao INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador III do 6° semestre do curso.
@@ -9,7 +9,9 @@ A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão
 
 Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 
-![Univesp_logo_png_rgb](https://github.com/kellydatabase/Teste/assets/122828003/5416a6ca-754c-4f38-9216-d2a20a1563e3)
+
+![Image](https://github.com/user-attachments/assets/3b8643d1-9901-4448-b761-21b9d03996f8)
+
 
 # Projeto Integrador III -  Eixo Computação
 ## Objetivo
@@ -64,6 +66,9 @@ https://github.com/kellydatabase/Teste/assets/122828003/863a259f-0af6-4fdf-ae60-
 - CSS 3
 - Bootstrap 4
 
+## Acessibilidade
+- Vlibras
+
 # Como executar o projeto
 
 ## Aplicação e banco de dados 
@@ -103,7 +108,7 @@ http://localhost:8080
 - Orientadora: Ana Paula Enedina dos Santos NucciAna Paula Enedina dos Santos Nucci
 
 ## Licença
-- Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI1/blob/main/LICENSE) 
+- Este projeto está licenciado sob a MIT License. [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kevinpiovezan/Univesp_PI3/blob/main/LICENSE) 
 ```bash
 https://github.com/kellydatabase/Univesp_PI1/blob/main/LICENSE
 
