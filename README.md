@@ -46,7 +46,7 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 ![Image](https://github.com/user-attachments/assets/64457227-949e-4247-9ce0-64941a0098b9)
 
 ## Tela de busca
-![Image](https://github.com/user-attachments/assets/7f147397-a132-4525-beac-456dec0d1c9f)
+![Image](https://github.com/user-attachments/assets/df3d1e63-d65b-4527-bb64-e4fb7f999718)
 
 ## Tela de mapas
 ![Image](https://github.com/user-attachments/assets/911320e5-71d4-461f-acb7-d266cbc99ed4)
