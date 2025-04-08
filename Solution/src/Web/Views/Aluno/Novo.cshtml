@@ -3,7 +3,7 @@
 }
 
 <div class="content-title d-flex justify-content-between">
-    <button type="button" id="btn_voltar" onclick="location.href='/busca'" class="btn mr-3 my-1 mb-2 w-150 bg-blue-gradient shadow text-white font-weight-bold d-inline-block fas fa-arrow-left" style="background-color:#012C33;max-height:48px ;border-radius: 50%;font-size: 1.5rem;padding: 0.75rem;" aria-label="Voltar para a página de busca"></button>
+    <button type="button" id="btn_voltar" onclick="location.href='/busca'" class="btn mr-3 my-1 mb-2 w-150 bg-blue-gradient shadow text-white font-weight-bold d-inline-block fas fa-arrow-left" style="background-color:#012C33;max-height:48px ;border-radius: 50%;font-size: 1.5rem;padding: 0.75rem;"></button>
     <h4 class="page-title">
         Novo Aluno
     </h4>
@@ -93,12 +93,57 @@
                 <input id="telefone-fixo" type="text" class="form-control" placeholder="Campo opcional">
             </div>
             <div class="form-group">
-                <label for="endereco">Endereco:</label>
-                <input id="endereco" type="text" class="form-control">
+                <label for="cep">CEP:</label>
+                <input id="cep" type="text" class="form-control" placeholder="Ex: 12345-678" onblur="pesquisacep(this.value);">
+            </div>            
+            <div class="form-group">
+                <label for="rua">Rua:</label>
+                <input id="rua" type="text" class="form-control">
             </div>
             <div class="form-group">
-                <label for="cep">CEP:</label>
-                <input id="cep" type="text" class="form-control" placeholder="Ex: 12345-678">
+                <label for="bairro">Bairro:</label>
+                <input id="bairro" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input id="cidade" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select class="form-control" id="estado" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ibge">IBGE:</label>
+                <input id="ibge" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="genero">Gênero: </label>
@@ -147,10 +192,10 @@
                     <option value="1">Sim</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="cursos">Se sim, quais cursos: </label>
-                <input type="text" id="cursos" class="form-control" placeholder="Preencha apenas caso tenha marcado 'Sim' na pergunta anterior"/>
-            </div>   
+                <div class="form-group">
+                    <label for="cursos">Se sim, quais cursos: </label>
+                    <input type="text" id="cursos" class="form-control" placeholder="Preencha apenas caso tenha marcado 'Sim' na pergunta anterior"/>
+                </div>   
             <div class="form-group">
                 <label for="professor">É professor: </label>
                 <select class="form-control" id="professor">
@@ -186,27 +231,7 @@
                     <option value="0">Não</option>
                     <option value="1">Sim</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="nome-colegio">Nome do colégio que cursou ensino médio: </label>
-                <input type="text" id="nome-colegio" class="form-control" placeholder="Digite o nome do colégio onde se formou no ensino médio"/>
-            </div>    
-            <div class="form-group">
-                <label for="data-conclusao">Data de conclusão do ensino médio:</label>
-                <input id="data-conclusao" type="date" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="observacao-1">Observação 1: </label>
-                <input type="text" id="observacao-1" class="form-control" placeholder="Digite qualquer valor que achar pertinente"/>
-            </div>    
-            <div class="form-group">
-                <label for="observacao-2">Observação 2: </label>
-                <input type="text" id="observacao-2" class="form-control" placeholder="Digite qualquer valor que achar pertinente"/>
-            </div>    
-            <div class="form-group">
-                <label for="observacao-3">Observação 3: </label>
-                <input type="text" id="observacao-3" class="form-control" placeholder="Digite qualquer valor que achar pertinente"/>
-            </div>    
+            </div>   
         </div>
     </div>
 </section>
@@ -336,15 +361,19 @@
         let nome_Social = $("#nome-social").val();
         let RA = $("#RA").val();
         let data_nascimento = $("#data-nascimento").val();
-        let cpfPontuado = $("#cpf").val();
+        let cpf = $("#cpf").val();
         let rg = $("#rg").val();
         let uf = $("#uf").val();
         let data_emissao = $("#data-emissao").val();
         let email = $("#email").val();
         let celular = $("#celular").val();
         let tel_fixo = $("#telefone-fixo").val();
-        let endereco = $("#endereco").val();
-        let cep = $("#cep").val();        
+        let cep = $("#cep").val();
+        let rua = $("#rua").val();
+        let bairro = $("#bairro").val();
+        let cidade = $("#cidade").val();
+        let estado = $("#estado").val();
+        let ibge = $("#ibge").val();
         let genero = $("#genero").val();        
         let id_Status_Matricula = parseInt($("#matricula").val())
         let raca = $("#raca").val();        
@@ -356,14 +385,7 @@
         let eixo = $("#eixo").val();        
         let cadastro_SpTrans = $("#bilhete-unico").val()  === "1" ? true : false;
         let autorizacao_imagem = $("#autorizacao-imagem").val()  === "1" ? true : false;
-        let nome_colegio = $("#nome-colegio").val();
-        let data_conclusao = $("#data-conclusao").val();
-        let observacao_1 = $("#observacao-1").val();
-        let observacao_2 = $("#observacao-2").val();
-        let observacao_3 = $("#observacao-3").val();
        
-        let cpf = cpfPontuado.replace(/[^\d]/g, '')
-
         if(nome === ""){
             toastr.error("'Nome' não pode estar vazio");
             return;
@@ -394,16 +416,27 @@
             toastr.error("'Celular' não pode estar vazio");
             return;
         }
-        
-        if(endereco === ""){
-            toastr.error("'Endereco' não pode estar vazio");
-            return;
-        }
-        
+
         if(cep === ""){
             toastr.Error("'CEP' não pode estar vazio");
             return;
-        }        
+        }
+        if(rua === ""){
+            toastr.error("'Rua' não pode estar vazio");
+            return;
+        }
+        if(bairro === ""){
+            toastr.error("'Bairro' não pode estar vazio");
+            return;
+        }
+        if(cidade === ""){
+            toastr.error("'Cidade' não pode estar vazio");
+            return;
+        }
+        if(estado === ""){
+            toastr.error("'Estado' não pode estar vazio");
+            return;
+        }
         
         let data = {
             id_Status_Matricula: id_Status_Matricula,
@@ -411,7 +444,11 @@
             cep: cep,
             nome: nome,
             nome_Social: nome_Social,
-            endereco: endereco,      
+            rua: rua,
+            bairro: bairro,
+            cidade: cidade,
+            estado: estado,
+            ibge: ibge,
             cursos:cursos, 
             eixo:eixo, 
             genero:genero,
@@ -429,12 +466,7 @@
             professor: professor,            
             autorizacao_imagem: autorizacao_imagem,
             cadastro_SpTrans: cadastro_SpTrans,
-            servidor_Publico: servidor_publico,
-            nome_Escola_Ensino_Medio: nome_colegio,
-            data_Conclusao_Ensino_Medio: data_conclusao,
-            observacao_1: observacao_1,
-            observacao_2: observacao_2,
-            observacao_3: observacao_3,
+            servidor_Publico: servidor_publico
         }
         console.log(data);
         toggleLoading();
@@ -465,4 +497,73 @@
     $(document).ready(() => {
       
     })
+
+    function limpa_formulario_cep() {
+        //Limpa valores do formulário de cep.
+        document.getElementById('rua').value=("");
+        document.getElementById('bairro').value=("");
+        document.getElementById('cidade').value=("");
+        document.getElementById('estado').value=("");
+        document.getElementById('ibge').value=("");
+    }
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('estado').value=(conteudo.uf);
+            document.getElementById('ibge').value=(conteudo.ibge);
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulario_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('rua').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                document.getElementById('estado').value="...";
+                document.getElementById('ibge').value="...";
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulario_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulario_cep();
+        }
+    }
+
 </script>

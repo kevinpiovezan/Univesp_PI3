@@ -57,12 +57,13 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
             var aluno = await _alunoRepository.ObterPorId(idAluno);
 
             aluno.Email = dadosAluno.Email;
-            aluno.Endereco = dadosAluno.Endereco;
             aluno.Cep = dadosAluno.Cep;
+            aluno.Rua = dadosAluno.Rua;
+            aluno.Bairro = dadosAluno.Bairro;
+            aluno.Cidade = dadosAluno.Cidade;
+            aluno.Estado = dadosAluno.Estado;
+            aluno.IBGE = dadosAluno.IBGE;
             aluno.Nome = dadosAluno.Nome;
-            aluno.Observacao_1 = dadosAluno.Observacao_1;
-            aluno.Observacao_2 = dadosAluno.Observacao_2;
-            aluno.Observacao_3 = dadosAluno.Observacao_3;
             aluno.Celular = dadosAluno.Celular;
             aluno.Tel_Fixo = dadosAluno.Tel_Fixo;
             aluno.Professor = dadosAluno.Professor;

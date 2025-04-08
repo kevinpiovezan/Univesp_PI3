@@ -6,7 +6,11 @@ CREATE TABLE `Alunos` (
   `RA` varchar(255) NOT NULL,
   `Nome_Social` varchar(255) DEFAULT NULL,
   `Cep` varchar(26) NOT NULL,
-  `Endereco` text NOT NULL,
+  `Rua` varchar(60) NOT NULL,
+  `Bairro` varchar(40) NOT NULL,
+  `Cidade` varchar(40) NOT NULL,
+  `Estado` varchar(2) NOT NULL,
+  `IBGE` varchar(8),
   `Cursou_Faculdade` tinyint(1) NOT NULL,
   `Cursos` text,
   `Professor` tinyint(1) NOT NULL,
@@ -16,8 +20,6 @@ CREATE TABLE `Alunos` (
   `Genero` varchar(26) NOT NULL,
   `Raca_Cor_Etnia` varchar(26) NOT NULL,
   `EnsinoMedio_Escola_Publica` tinyint(1) NOT NULL,
-  `Nome_Escola_Ensino_Medio` text NOT NULL,
-  `Data_Conclusao_Ensino_Medio` date NOT NULL,
   `Data_Nascimento` date NOT NULL,
   `Cpf` varchar(26) NOT NULL,
   `Rg` varchar(26) NOT NULL,
@@ -28,9 +30,6 @@ CREATE TABLE `Alunos` (
   `Tel_Fixo` varchar(26) DEFAULT NULL,
   `Ultima_Atualizacao` datetime NOT NULL,
   `Servidor_Publico` tinyint(1) NOT NULL,
-  `Observacao_1` text,
-  `Observacao_2` text,
-  `Observacao_3` text,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 LOCK TABLES `Alunos` WRITE;

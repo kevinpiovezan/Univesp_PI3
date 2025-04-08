@@ -41,7 +41,7 @@
                             </label>
         
                             <button type="button" class="btn mb-2 col-2 ml-3 w-150 btn-red align-self-baseline rounded-pill shadow text-white font-weight-bold d-inline-block"
-                                    style="cursor:pointer" onclick="baixarAlunos();" aria-label="Baixar lista de alunos">
+                                    style="cursor:pointer" onclick="baixarAlunos();">
                                 Baixar Dados
                             </button>
                         </p>
@@ -127,8 +127,12 @@
                                         <th>UF</th>
                                         <th>Data de Emissão</th>
                                         <th>E-mail pessoal</th>
-                                        <th>Endereço</th>
                                         <th>Cep</th>
+                                        <th>Rua</th>
+                                        <th>Bairro</th>
+                                        <th>Cidade</th>
+                                        <th>Estado</th>
+                                        <th>IBGE</th>
                                         <th>Celular</th>
                                         <th>Telefone Fixo</th>
                                         <th>Gênero</th>
@@ -141,17 +145,11 @@
                                         <th>Curso Escolhido na Uniceu:</th>
                                         <th>Cadastro Bilhete Estudante(SPTrans):</th>
                                         <th>Autorização de imagem:</th>
-                                        <th>Nome do colégio que cursou ensino médio:</th>
-                                        <th>Data de conclusão do ensino médio:</th>
-                                        <th>Observação 1:</th>
-                                        <th>Observação 2:</th>
-                                        <th>Observação 3:</th>
                                     </tr>
                                 </thead>`;
             for (let entry of data) {
                 let dataNascimento = new Date(entry.data_Nascimento);
                 let dataEmissao = new Date(entry.data_Emissao);
-                let dataConclusao = new Date(entry.data_Conclusao_Ensino_Medio);
                 let status;
                 switch (entry.id_Status_Matricula){
                     case 1:
@@ -178,8 +176,12 @@
                 htmlLista += "<td>" + entry.uf + "</td>";
                 htmlLista += "<td>" + `${dataEmissao.getDate()}/${dataEmissao.getMonth()+1}/${dataEmissao.getFullYear()}` + "</td>";
                 htmlLista += "<td>" + entry.email + "</td>";
-                htmlLista += "<td>" + entry.endereco + "</td>";
                 htmlLista += "<td>" + entry.cep + "</td>";
+                htmlLista += "<td>" + entry.rua + "</td>";
+                htmlLista += "<td>" + entry.bairro + "</td>";
+                htmlLista += "<td>" + entry.cidade + "</td>";
+                htmlLista += "<td>" + entry.estado + "</td>";
+                htmlLista += "<td>" + entry.ibge + "</td>";
                 htmlLista += "<td>" + entry.celular+ "</td>";
                 htmlLista += "<td>" + entry.tel_Fixo+ "</td>";
                 htmlLista += "<td>" + entry.genero+ "</td>";
@@ -192,13 +194,6 @@
                 htmlLista += "<td>" + entry.eixo+ "</td>";
                 htmlLista += "<td>" + (entry.cadastro_SpTrans ? "Sim" : "Não")+ "</td>";
                 htmlLista += "<td>" + (entry.autorizacao_Imagem ? "Sim" : "Não")+ "</td>";
-                htmlLista += "<td>" + entry.nome_Escola_Ensino_Medio+ "</td>";
-                htmlLista += "<td>" + `${dataConclusao.getDate()}/${dataConclusao.getMonth()+1}/${dataConclusao.getFullYear()}` + "</td>";
-                htmlLista += "<td>" + entry.observacao_1+ "</td>";
-                htmlLista += "<td>" + entry.observacao_2+ "</td>";
-                htmlLista += "<td>" + entry.observacao_3+ "</td>";
-
-
                 htmlLista += "</tr>";
             }
 
@@ -270,7 +265,7 @@
         }).fail(function (xhr, status, error) {
             toggleLoading();
 
-            
+            //toastr.error(xhr.responseText);
             toastr.error("Houve um erro em algum campo do arquivo, verifique se todos os campos são do tipo texto");
         });
     }
