@@ -55,8 +55,7 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegrador.Infrastructure.Data.Repositorie
                     (filters.EnsinoMedio_Escola_Publica == null || a.EnsinoMedio_Escola_Publica == filters.EnsinoMedio_Escola_Publica) &&
                     (filters.Cadastro_SpTrans == null || a.Cadastro_SpTrans == filters.Cadastro_SpTrans) &&
                     (filters.Servidor_Publico == null || a.Servidor_Publico == filters.Servidor_Publico) &&
-                    (filters.Nascimento == "" || a.Data_Nascimento <= Convert.ToDateTime(filters.Nascimento)) &&
-                    (filters.Conclusao_Em == "" || a.Data_Conclusao_Ensino_Medio <= Convert.ToDateTime(filters.Conclusao_Em))
+                    (filters.Nascimento == "" || a.Data_Nascimento <= Convert.ToDateTime(filters.Nascimento)) 
 
                 select new BuscaRes()
                 {
