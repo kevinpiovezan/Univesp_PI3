@@ -380,31 +380,31 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
                 {
                     critica.Criticas.Add("'Raça/Cor/Etnia' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 17].Text == "")
+                if (planilha.Cells[r, 21].Text == "")
                 {
                     critica.Criticas.Add("'Cursou Ensino Médio em Escola Pública?' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 18].Text == "")
+                if (planilha.Cells[r, 22].Text == "")
                 {
                     critica.Criticas.Add("'Já cursou alguma faculdade?' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 20].Text == "")
+                if (planilha.Cells[r, 24].Text == "")
                 {
                     critica.Criticas.Add("'É professor?' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 21].Text == "")
+                if (planilha.Cells[r, 25].Text == "")
                 {
                     critica.Criticas.Add("'É Servidor Público?' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 22].Text == "")
+                if (planilha.Cells[r, 26].Text == "")
                 {
                     critica.Criticas.Add("'Eixo' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 23].Text == "")
+                if (planilha.Cells[r, 27].Text == "")
                 {
                     critica.Criticas.Add("'Cadastro Bilhete de estudante(SPTrans)' não pode ficar vazio");
                 }
-                if (planilha.Cells[r, 24].Text == "")
+                if (planilha.Cells[r, 28].Text == "")
                 {
                     critica.Criticas.Add("'Autorização de Imagem' não pode ficar vazio");
                 }
