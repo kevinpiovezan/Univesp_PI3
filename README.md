@@ -48,7 +48,7 @@ DRP14-Projeto Integrador em Computação III-Turma 001
 ## Carga de alunos
 ![Image](https://github.com/user-attachments/assets/64457227-949e-4247-9ce0-64941a0098b9)
 
-## Cadastro de Alunos e API ViCep
+## Cadastro de Alunos e API ViaCep
 ![Image](https://github.com/user-attachments/assets/d9677327-19f3-43dc-804f-086a967ab863)
 
 ## Tela de busca
