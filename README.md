@@ -1,9 +1,9 @@
-# Implementação de Acessibilidade e API: Melhorias e Automatização no Gerenciamento de Dados do Polo Caminho do Mar
+# InfoGestão 3.0: Otimização, Integração e Acessibilidade na Gestão de Informações Acadêmicas do Polo Caminho do Mar 
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kellydatabase/Univesp_PI3/blob/main/LICENSE) 
 
 # Sobre a aplicação
-Esse repositório é dedicado ao INFOGESTÃO: Automatização do Gerenciamento de Dados do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador III do 6° semestre do curso.
+Esse repositório é dedicado ao InfoGestão 3.0: Otimização, Integração e Acessibilidade na Gestão de Informações Acadêmicas do Polo Caminho do Mar é uma aplicação, criada pelos alunos do Eixo de Computação da Faculdade Virtual do Estado de São Paulo - Univesp e faz parte do Projeto Integrador III do 6° semestre do curso.
 
 A aplicação consiste em auxiliar a Secretaria no cadastro, consulta e emissão de relatórios dos alunos do Polo Ceu Caminho do Mar.
 
@@ -13,7 +13,9 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 ![Image](https://github.com/user-attachments/assets/3b8643d1-9901-4448-b761-21b9d03996f8)
 
 
-# Projeto Integrador III -  Eixo Computação
+# Projeto Integrador III -  Eixo Computação 
+DRP14-Projeto Integrador em Computação III-Turma 001
+
 ## Objetivo
 - Desenvolver um software com framework web ou aplicativo que utilize banco de dados, inclua script web (Javascript), nuvem, acessibilidade, controle de versão, integração contínua e testes.
 - Incluir um dos seguintes requisitos: uso e fornecimento de API, análises de dados e IoT.
@@ -28,6 +30,7 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 - Controle de Versão
 - Acessibilidade VLibras
 - API
+- IoT
 
 
 # Layout da aplicação
@@ -44,6 +47,9 @@ Site Faculdade Virtual do Estado de São Paulo - Univesp: https://univesp.br/
 
 ## Carga de alunos
 ![Image](https://github.com/user-attachments/assets/64457227-949e-4247-9ce0-64941a0098b9)
+
+## Cadastro de Alunos e API ViaCep
+![Image](https://github.com/user-attachments/assets/d9677327-19f3-43dc-804f-086a967ab863)
 
 ## Tela de busca
 ![Image](https://github.com/user-attachments/assets/df3d1e63-d65b-4527-bb64-e4fb7f999718)
