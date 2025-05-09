@@ -1,4 +1,6 @@
-﻿@model Univesp.CaminhoDoMar.ProjetoIntegrador.Web.Models.AlunoViewModel
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@using OfficeOpenXml.FormulaParsing.Excel.Functions.Logical
+@model Univesp.CaminhoDoMar.ProjetoIntegrador.Web.Models.AlunoViewModel
 @{
     ViewData["Title"] = @Model.Aluno.Nome;
 }
@@ -192,9 +194,46 @@
                 <div class="section-content table-data">
                     <div class="bloco-dados-gerais">
                         <div class="info-item">
+                            <p class="item-title">Status da Matrícula:</p>
+                            <select class="form-control" id="editar_matricula" value="@Model.Aluno.Id_Status_Matricula">
+                                @if (@Model.Aluno.Id_Status_Matricula == 1)
+                                {
+                                    <option value="1" selected>ATIVA</option>
+                                }
+                                else
+                                {
+                                    <option value="1">ATIVA</option>
+                                }
+                                @if (@Model.Aluno.Id_Status_Matricula == 2)
+                                {
+                                    <option value="2" selected>TRANCADA</option>
+                                }
+                                else
+                                {
+                                    <option value="2">TRANCADA</option>
+                                }
+                                @if (@Model.Aluno.Id_Status_Matricula == 3)
+                                {
+                                    <option value="3" selected>CONCLUÍDA</option>
+                                }
+                                else
+                                {
+                                    <option value="3">CONCLUÍDA</option>
+                                }
+                                @if (@Model.Aluno.Id_Status_Matricula == 4)
+                                {
+                                    <option value="4" selected>CANCELADA</option>
+                                }
+                                else
+                                {
+                                    <option value="4">CANCELADA</option>
+                                }
+                            </select>                            
+                        </div>
+                        <div class="info-item">
                             <p class="item-title">Cep:</p>
                             <input type="text" id="editar_cep" class="item-data form-control" value="@Model.Aluno.Cep" onblur="pesquisacep(this.value);"/>
-                        </div>                        
+                        </div>
                         <div class="info-item">
                             <p class="item-title">Rua:</p>
                             <input type="text" id="editar_rua" class="item-data form-control" value="@Model.Aluno.Rua"/>
@@ -237,16 +276,16 @@
                         </div>
                         <div class="info-item">
                             <p class="item-title">Observação 1: </p>
-                            <input type="text" id="editar_observacao_1" class="item-data form-control" value="@Model.Aluno.Observacao_1" />
+                            <input type="text" id="editar_observacao_1" class="item-data form-control" value="@Model.Aluno.Observacao_1"/>
                         </div>
                         <div class="info-item">
                             <p class="item-title">Observação 2: </p>
-                            <input type="text" id="editar_observacao_2" class="item-data form-control" value="@Model.Aluno.Observacao_2" />
+                            <input type="text" id="editar_observacao_2" class="item-data form-control" value="@Model.Aluno.Observacao_2"/>
                         </div>
                         <div class="info-item">
                             <p class="item-title">Observação 3: </p>
-                            <input type="text" id="editar_observacao_3" class="item-data form-control" value="@Model.Aluno.Observacao_3" />
-                        </div>                        
+                            <input type="text" id="editar_observacao_3" class="item-data form-control" value="@Model.Aluno.Observacao_3"/>
+                        </div>
                         @* <div class="info-item"> *@
                         @*     <p class="item-title">É professor:</p> *@
                         @*     <select class="form-control" id="editar_professor"> *@
@@ -418,6 +457,7 @@
     let id_aluno = parseInt(document.getElementById('id_aluno').value);
 
     const editarAluno = () => {
+        let id_Status_Matricula = parseInt($("#editar_matricula").val())
         let cep = $("#editar_cep").val();
         let rua = $("#editar_rua").val();
         let bairro = $("#editar_bairro").val();
@@ -440,6 +480,7 @@
         console.log(cadastro_SpTrans)        
         
         let data = {
+            id_Status_Matricula: id_Status_Matricula,
             cep: cep,
             rua: rua,
             bairro: bairro,

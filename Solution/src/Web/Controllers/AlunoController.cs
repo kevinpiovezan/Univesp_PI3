@@ -56,6 +56,7 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
         {
             var aluno = await _alunoRepository.ObterPorId(idAluno);
 
+            aluno.Id_Status_Matricula = dadosAluno.Id_Status_Matricula;
             aluno.Email = dadosAluno.Email;
             aluno.Cep = dadosAluno.Cep;
             aluno.Rua = dadosAluno.Rua;
