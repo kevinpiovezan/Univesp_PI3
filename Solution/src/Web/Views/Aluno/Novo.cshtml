@@ -231,7 +231,27 @@
                     <option value="0">Não</option>
                     <option value="1">Sim</option>
                 </select>
-            </div>   
+            </div>
+            <div class="form-group">
+                <label for="nome-colegio">Nome do colégio que cursou ensino médio: </label>
+                <input type="text" id="nome-colegio" class="form-control" placeholder="Digite o nome do colégio onde se formou no ensino médio"/>
+            </div>
+            <div class="form-group">
+                <label for="data-conclusao">Data de conclusão do ensino médio:</label>
+                <input id="data-conclusao" type="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="observacao-1">Observação 1: </label>
+                <input type="text" id="observacao-1" class="form-control" placeholder="Digite qualquer valor que achar pertinente"/>
+            </div>
+            <div class="form-group">
+                <label for="observacao-2">Observação 2: </label>
+                <input type="text" id="observacao-2" class="form-control" placeholder="Digite qualquer valor que achar pertinente"/>
+            </div>
+            <div class="form-group">
+                <label for="observacao-3">Observação 3: </label>
+                <input type="text" id="observacao-3" class="form-control" placeholder="Digite qualquer valor que achar pertinente"/>
+            </div>
         </div>
     </div>
 </section>
@@ -385,6 +405,11 @@
         let eixo = $("#eixo").val();        
         let cadastro_SpTrans = $("#bilhete-unico").val()  === "1" ? true : false;
         let autorizacao_imagem = $("#autorizacao-imagem").val()  === "1" ? true : false;
+        let nome_colegio = $("#nome-colegio").val();
+        let data_conclusao = $("#data-conclusao").val();
+        let observacao_1 = $("#observacao-1").val();
+        let observacao_2 = $("#observacao-2").val();
+        let observacao_3 = $("#observacao-3").val();
        
         if(nome === ""){
             toastr.error("'Nome' não pode estar vazio");
@@ -466,7 +491,12 @@
             professor: professor,            
             autorizacao_imagem: autorizacao_imagem,
             cadastro_SpTrans: cadastro_SpTrans,
-            servidor_Publico: servidor_publico
+            servidor_Publico: servidor_publico,
+            nome_Escola_Ensino_Medio: nome_colegio,
+            data_Conclusao_Ensino_Medio: data_conclusao,
+            observacao_1: observacao_1,
+            observacao_2: observacao_2,
+            observacao_3: observacao_3,            
         }
         console.log(data);
         toggleLoading();

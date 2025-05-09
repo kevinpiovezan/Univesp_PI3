@@ -115,6 +115,11 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorWeb.Controllers
                     aluno_banco.Autorizacao_Imagem = a.Autorizacao_Imagem;
                     aluno_banco.Cadastro_SpTrans = a.Cadastro_SpTrans;
                     aluno_banco.Servidor_Publico = a.Servidor_Publico;
+                    aluno_banco.Nome_Escola_Ensino_Medio = a.Nome_Escola_Ensino_Medio;
+                    aluno_banco.Observacao_1 = a.Observacao_1;
+                    aluno_banco.Observacao_2 = a.Observacao_2;
+                    aluno_banco.Observacao_3 = a.Observacao_3;
+                    aluno_banco.Data_Conclusao_Ensino_Medio = a.Data_Conclusao_Ensino_Medio;
                     aluno_banco.Ultima_Atualizacao = DateTime.Now;
 
                     if(dados.Confirmado == false)
