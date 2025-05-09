@@ -173,7 +173,9 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
 
             List<string> cabecalho = new List<string>() { "Status Matricula","Nome","RA","Nome Social", "Data de Nascimento", "CPF", "RG", "UF", "Data de Emissão", "E-mail pessoal", "CEP", "Rua", 
                 "Bairro", "Cidade", "Estado", "IBGE",  "Celular", "Telefone Fixo", "Gênero", "Raça/Cor/Etnia","Cursou Ensino Médio em Escola Pública?", "Já cursou alguma faculdade?", 
-                "Se sim, quais cursos?", "É professor?", "É Servidor Público?", "Eixo escolhido na UniCeu", "Cadastro Bilhete de estudante(SPTrans)","Autorização de Imagem" };
+                "Se sim, quais cursos?", "É professor?", "É Servidor Público?", "Eixo escolhido na UniCeu", "Cadastro Bilhete de estudante(SPTrans)","Autorização de Imagem",
+                "Nome da escola que cursou ensino médio","Data de conclusão do ensino médio","Observação 1", "Observação 2", "Observação 3"
+            };
             foreach (string c in cabecalho)
             {
                 AdicionarHeader(workSheet, indiceHeader, c);
@@ -229,6 +231,11 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
                 workSheet.Cells[currentRow, 26].Value = a.Eixo;
                 workSheet.Cells[currentRow, 27].Value = a.Cadastro_SpTrans ? "Sim" : "Não";
                 workSheet.Cells[currentRow, 28].Value = a.Autorizacao_Imagem ? "Sim" : "Não";
+                workSheet.Cells[currentRow, 29].Value = a.Nome_Escola_Ensino_Medio;
+                workSheet.Cells[currentRow, 30].Value = a.Data_Conclusao_Ensino_Medio.ToString("dd/MM/yyyy");
+                workSheet.Cells[currentRow, 31].Value = String.IsNullOrEmpty(a.Observacao_1) ? "": a.Observacao_1;
+                workSheet.Cells[currentRow, 32].Value = String.IsNullOrEmpty(a.Observacao_2) ? "": a.Observacao_2;
+                workSheet.Cells[currentRow, 33].Value = String.IsNullOrEmpty(a.Observacao_3) ? "": a.Observacao_3;
                 currentRow++;
             }
 
@@ -250,7 +257,9 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
             ExcelWorksheet planilha = excel.Workbook.Worksheets[0];
             List<string> cabecalho = new List<string>() { "Status Matricula","Nome","RA","Nome Social", "Data de Nascimento", "CPF", "RG", "UF", "Data de Emissão", "E-mail pessoal", "CEP", "Rua", 
                 "Bairro", "Cidade", "Estado", "IBGE",  "Celular", "Telefone Fixo", "Gênero", "Raça/Cor/Etnia","Cursou Ensino Médio em Escola Pública?", "Já cursou alguma faculdade?", 
-                "Se sim, quais cursos?", "É professor?", "É Servidor Público?", "Eixo escolhido na UniCeu", "Cadastro Bilhete de estudante(SPTrans)","Autorização de Imagem" };
+                "Se sim, quais cursos?", "É professor?", "É Servidor Público?", "Eixo escolhido na UniCeu", "Cadastro Bilhete de estudante(SPTrans)","Autorização de Imagem",
+                "Nome da escola que cursou ensino médio","Data de conclusão do ensino médio","Observação 1", "Observação 2", "Observação 3"
+            };
 
             ResultadoCarga res = new ResultadoCarga();
             res.Criticas_Carga = new List<CriticasCarga>();
@@ -321,6 +330,11 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
                     Eixo = planilha.Cells[r, 26].Text,
                     Cadastro_SpTrans = planilha.Cells[r, 27].Text.ToLower() == "sim",
                     Autorizacao_Imagem = planilha.Cells[r, 28].Text.ToLower() == "sim",
+                    Nome_Escola_Ensino_Medio = planilha.Cells[r, 29].Text,
+                    Data_Conclusao_Ensino_Medio = DateTime.ParseExact(planilha.Cells[r, 30].Text.Replace("\"",""),"dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    Observacao_1 = planilha.Cells[r, 31].Text,
+                    Observacao_2 = planilha.Cells[r, 32].Text,
+                    Observacao_3 = planilha.Cells[r, 33].Text,                    
                     Ultima_Atualizacao = DateTime.Now
                 };
 
@@ -408,6 +422,14 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
                 {
                     critica.Criticas.Add("'Autorização de Imagem' não pode ficar vazio");
                 }
+                if (planilha.Cells[r, 29].Text == "")
+                {
+                    critica.Criticas.Add("'Nome da escola que cursou ensino médio' não pode ficar vazio");
+                }
+                if (a.Data_Conclusao_Ensino_Medio == DateTime.MinValue)
+                {
+                    critica.Criticas.Add("'Data de conclusão do ensino médio' não pode ficar vazio");
+                }                
 
                 if (critica.Criticas.Count > 0)
                     res.Criticas_Carga.Add(critica);
@@ -453,7 +475,8 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
                 {
                     "Última atualização", "Status Matricula","Nome","RA","Nome Social", "Data de Nascimento", "CPF", "RG", "UF", "Data de Emissão", "E-mail pessoal", "CEP", "Rua", "Bairro", 
                     "Cidade", "Estado", "IBGE", "Celular", "Telefone Fixo", "Gênero", "Raça/Cor/Etnia","Cursou Ensino Médio em Escola Pública?", "Já cursou alguma faculdade?", 
-                    "Se sim, quais cursos?", "É professor?", "É Servidor Público?", "Eixo escolhido na UniCeu", "Cadastro Bilhete de estudante(SPTrans)","Autorização de Imagem"
+                    "Se sim, quais cursos?", "É professor?", "É Servidor Público?", "Eixo escolhido na UniCeu", "Cadastro Bilhete de estudante(SPTrans)","Autorização de Imagem",
+                    "Nome da escola que cursou ensino médio","Data de conclusão do ensino médio","Observação 1", "Observação 2", "Observação 3"
                 };
 
                 foreach (string c in cabecalho)
@@ -512,6 +535,11 @@ namespace Univesp.CaminhoDoMar.ProjetoIntegradorInfrastructure.Services
                     workSheet.Cells[currentRow, 27].Value = a.Eixo;
                     workSheet.Cells[currentRow, 28].Value = a.Cadastro_SpTrans ? "Sim" : "Não";
                     workSheet.Cells[currentRow, 29].Value = a.Autorizacao_Imagem ? "Sim" : "Não";
+                    workSheet.Cells[currentRow, 30].Value = a.Nome_Escola_Ensino_Medio;
+                    workSheet.Cells[currentRow, 31].Value = a.Data_Conclusao_Ensino_Medio.ToString("dd/MM/yyyy");
+                    workSheet.Cells[currentRow, 32].Value = String.IsNullOrEmpty(a.Observacao_1) ? "": a.Observacao_1;
+                    workSheet.Cells[currentRow, 33].Value = String.IsNullOrEmpty(a.Observacao_2) ? "": a.Observacao_2;
+                    workSheet.Cells[currentRow, 34].Value = String.IsNullOrEmpty(a.Observacao_3) ? "": a.Observacao_3;
 
                     currentRow++;
                 }
