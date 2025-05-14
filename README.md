@@ -62,6 +62,7 @@ DRP14-Projeto Integrador em Computação III-Turma 001
 ## Back end
 - Framework: .NET CORE 3.1
 - Linguagem: C# 8.0
+  
 ## Banco de dados
 - MySQL
   
@@ -72,7 +73,10 @@ DRP14-Projeto Integrador em Computação III-Turma 001
 
 ## Acessibilidade
 - VLibras
-
+  
+## API
+- ViaCep
+  
 # Como executar o projeto
 
 ## Aplicação e banco de dados 
@@ -98,10 +102,9 @@ http://localhost:8080
 
 # Autores
 
-- Caio Cesar Silva Lopes
-- José Ivan Marciano Júnior
 - Carlos Paião
 - George Toshio Shimabukuro
+- José Ivan Marciano Júnior
 - Kelly Rodrigues de Jesus
 - Kevin Christopher Piovezan
 - Ludmila Alves Pinto
